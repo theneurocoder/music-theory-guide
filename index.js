@@ -5,7 +5,7 @@ buttonsWithHoverEffect.forEach((buttonWithHoverEffect) => {
   buttonWithHoverEffect.addEventListener("mouseout", unhoverButton);
   buttonWithHoverEffect.addEventListener("click", unhoverButton);
   buttonWithHoverEffect.addEventListener("touchstart", hoverButton);
-  buttonWithHoverEffect.addEventListener("touchend", setTimeout()=> {
+  buttonWithHoverEffect.addEventListener("touchend", setTimeout() => {
     unhoverButton();
   }, 100);
 
