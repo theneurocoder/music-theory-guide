@@ -3,12 +3,9 @@ const buttonsWithHoverEffect = document.querySelectorAll(".hover-effect");
 buttonsWithHoverEffect.forEach((buttonWithHoverEffect) => {
   buttonWithHoverEffect.addEventListener("mouseover", hoverButton);
   buttonWithHoverEffect.addEventListener("mouseout", unhoverButton);
+  buttonWithHoverEffect.addEventListener("click", unhoverButton);
   buttonWithHoverEffect.addEventListener("touchstart", hoverButton);
-  buttonWithHoverEffect.addEventListener("touchend", () => {
-    setTimeout(function () {
-      unhoverButton();
-    }, 100);
-  });
+  buttonWithHoverEffect.addEventListener("touchend", unhoverButton);
 
   function hoverButton() {
     buttonWithHoverEffect.classList.add("active");
