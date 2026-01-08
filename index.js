@@ -1,11 +1,13 @@
-// Add hover effects to buttons
+// Add hover effect to buttons
 const buttonsWithHoverEffect = document.querySelectorAll(".hover-effect");
 buttonsWithHoverEffect.forEach((buttonWithHoverEffect) => {
   buttonWithHoverEffect.addEventListener("mouseover", hoverButton);
   buttonWithHoverEffect.addEventListener("mouseout", unhoverButton);
   buttonWithHoverEffect.addEventListener("click", unhoverButton);
   buttonWithHoverEffect.addEventListener("touchstart", hoverButton);
-  buttonWithHoverEffect.addEventListener("touchend", unhoverButton);
+  buttonWithHoverEffect.addEventListener("touchend", setTimeout()=> {
+    unhoverButton();
+  }, 100);
 
   function hoverButton() {
     buttonWithHoverEffect.classList.add("active");
