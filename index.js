@@ -5,9 +5,7 @@ buttonsWithHoverEffect.forEach((buttonWithHoverEffect) => {
   buttonWithHoverEffect.addEventListener("mouseout", unhoverButton);
   buttonWithHoverEffect.addEventListener("click", unhoverButton);
   buttonWithHoverEffect.addEventListener("touchstart", hoverButton);
-  buttonWithHoverEffect.addEventListener("touchend", setTimeout() => {
-    unhoverButton();
-  }, 100);
+  buttonWithHoverEffect.addEventListener("touchend", unhoverButton);
 
   function hoverButton() {
     buttonWithHoverEffect.classList.add("active");
